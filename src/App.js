@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function App() {
   const [repos, setRepos] = useState([{}]);
@@ -24,9 +24,7 @@ function App() {
         links:
         <a href="http://twitter.com/samrat_ghale">@twitter</a>
         <a href="malito: samrat.biz19@gmail.com">@gmail</a>
-        <BrowserRouter>
-          <Link onClick={() => (window.location.href = "/blog")}>@blog</Link>
-        </BrowserRouter>
+        <Link to="/blog">@blog</Link>
       </div>
       <div className="center-screen">
         repos:

@@ -2,17 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { Blog } from "./components/Blog";
+import { HashRouter } from "react-router-dom";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
     <div>
       <Switch>
-        <Route path="/blog" exact component={Blog} />
         <Route path="/" exact component={App} />
+        <Route path="/blog" exact component={Blog} />
       </Switch>
     </div>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById("root")
 );
