@@ -20,27 +20,27 @@ function App() {
         Samrat Ghale
       </a>
       <p>bio: student, </p>
-      <BrowserRouter>
-        <div className="center-screen">
-          links:
-          <a href="http://twitter.com/samrat_ghale">@twitter</a>
-          <a href="malito: samrat.biz19@gmail.com">@gmail</a>
-          <Link to="/blog">@blog</Link>
-        </div>
-        <div className="center-screen">
-          repos:
-          <br />
-          {repos.map((item, idx) => {
-            return (
-              <div>
-                <a href={item.html_url}>{item.name}</a>
-                <br />
-                <br />
-              </div>
-            );
-          })}
-        </div>
-      </BrowserRouter>
+      <div className="center-screen">
+        links:
+        <a href="http://twitter.com/samrat_ghale">@twitter</a>
+        <a href="malito: samrat.biz19@gmail.com">@gmail</a>
+        <BrowserRouter>
+          <Link onClick={() => (window.location.href = "/blog")}>@blog</Link>
+        </BrowserRouter>
+      </div>
+      <div className="center-screen">
+        repos:
+        <br />
+        {repos.map((item, idx) => {
+          return (
+            <div>
+              <a href={item.html_url}>{item.name}</a>
+              <br />
+              <br />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

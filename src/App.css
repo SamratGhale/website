@@ -15,8 +15,13 @@ a:visited {
 p {
   font-size: small;
 }
+.blog {
+  background-color: #585858;
+  color: aliceblue;
+}
 
-.center-screen {
+.center-screen,
+.blog {
   display: flex;
   flex-direction: column;
   justify-content: center;
