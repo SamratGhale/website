@@ -21,7 +21,8 @@ p {
 }
 
 .center-screen,
-.blog {
+.blog,
+.what {
   display: flex;
   flex-direction: column;
   justify-content: center;
